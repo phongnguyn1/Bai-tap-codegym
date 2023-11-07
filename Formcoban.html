@@ -1,0 +1,81 @@
+
+    <!DOCTYPE html>
+    <html>
+    <meta charset="UTF-8">
+    <head>
+        <style>
+            .form-container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #efe8e8;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .checkbox-group {
+                margin-bottom: 10px;
+            }
+
+            .checkbox-group label {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            button[type="submit"] {
+                background-color: #fffefe;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="form-container">
+        <h2>Sở thích của bạn </h2>
+
+        <form action="/submit-form" method="post">
+            <div class="form-group">
+                <label for="name">Họ Và Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group checkbox-group">
+                <label>Sở thích</label><br>
+                <input type="checkbox" id="hobby1" name="hobbies[]" value="Reading">
+                <label for="hobby1">Đọc sách </label>
+                <input type="checkbox" id="hobby2" name="hobbies[]" value="Sports">
+                <label for="hobby2">Thể Thao</label>
+                <input type="checkbox" id="hobby3" name="hobbies[]" value="Gaming">
+                <label for="hobby3">Chơi game</label>
+                <input type="checkbox" id="hobby4" name="hobbies[]" value="Traveling">
+                <label for="hobby4">Du lịch</label> <br>
+            </div>
+            <div class="form-group checkbox-group">
+
+                <input type="checkbox" id="hobby5" name="hobbies[]" value="Music">
+                <label for="hobby5">Âm nhạc </label>
+                <input type="checkbox" id="hobby6" name="hobbies[]" value="Surfing webs">
+                <label for="hobby6">Lướt Web</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    </body>
+    </html>
