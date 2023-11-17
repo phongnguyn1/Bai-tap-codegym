@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H3>Từ điển song ngữ Anh-Việt/Việt-Anh</H3>
+<label><input type="text" id="dictionary"/></label>
+<button onclick="translate1()">Dịch/Translate</button>
+
+<script>
+    let ask = document.getElementById("dictionary");
+    let result;
+    function translate1() {
+        let vN = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+        let enG = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let findAsk = ask.value.toLowerCase();
+        if (vN.indexOf(findAsk) !== -1) {
+            result = enG[vN.indexOf(findAsk)];
+        }else if (enG.indexOf(findAsk) !==-1) {
+            result = vN[enG.indexOf(findAsk)];
+        }else {
+            result = 'từ không có trong từ điển';
+        }
+        ask.value = result;
+    }
+</script>
+</body>
+</html>
